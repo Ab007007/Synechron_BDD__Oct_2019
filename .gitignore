@@ -1,4 +1,11 @@
 software/
 Eclipse_WS/.metadata/**
 Eclipse_WS/target
+Eclipse_WS/actitime/.classpath
+Eclipse_WS/actitime/.project
+Eclipse_WS/actitime/.settings/
+Eclipse_WS/actitime/json-output/
+Eclipse_WS/actitime/junit-output/
+Eclipse_WS/actitime/target/
+Eclipse_WS/actitime/test-output/
 
