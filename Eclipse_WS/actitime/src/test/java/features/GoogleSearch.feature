@@ -16,14 +16,31 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
 Feature: Google Search for a Company Information
 
-	@regression
-  Scenario: Search for a company Contact and Address
+  @regression
+  Scenario: Search for a Synechron Contact and Address
     Given I'm on google page
     When I enter "Synechron" in the search box
-    And  I click on search button
-    Then Results for my search criteria should be displayed
+    And I click on search button
+    Then Results for "Synechron" should be displayed
     And I should print those information on Console
-    And close the browser
+ 
+
+  @regression
+  Scenario: Search for a IBM Contact and Address
+    Given I'm on google page
+    When I enter "IBM" in the search box
+    And I click on search button
+    Then Results for "IBM" should be displayed
+    And I should print those information on Console
+ 
+
+  @regression
+  Scenario: Search for a Subex Contact and Address
+    Given I'm on google page
+    When I enter "Subex" in the search box
+    And I click on search button
+    Then Results for "Subex" should be displayed
+    And I should print those information on Console
+

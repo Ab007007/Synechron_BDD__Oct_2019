@@ -1,10 +1,10 @@
-package com.synechron.bdd.actitime.tdd.utils;
+package com.synechron.bdd.actitime.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ApplicationUtils {
+public class DriverUtils {
 	public static WebElement getMyElement(WebDriver driver, String identifier, String identifierValue)  {
 		System.out.println("Finding element using " + identifier + " and " + identifierValue);
 		WebElement ele = null;
@@ -74,5 +74,37 @@ public class ApplicationUtils {
 		WebElement ele = getMyElement(driver, identifier, identifierValue);
 		ele.click();
 	}
+	
+	public static void unSelectCheckBox(WebDriver driver, String identifier, String identifierValue)
+	{
+		WebElement ele  = getMyElement(driver, identifier, identifierValue);
+		
+		if(ele.isSelected())
+		{
+			System.out.println("Checkbox is already selected i'm unSelecting it!!!");
+			ele.click();
+		}
+		else
+		{
+			System.out.println("checkbox is already unselected so i'm not performing any operation");
+		}
+	}
+	
+	public static void selectCheckBox(WebDriver driver, String identifier, String identifierValue)
+	{
+		WebElement ele  = getMyElement(driver, identifier, identifierValue);
+		
+		if(!(ele.isSelected()))
+		{
+			System.out.println("Checkbox is not  selected i'm Selecting it!!!");
+			ele.click();
+		}
+		else
+		{
+			System.out.println("checkbox is already selected so i'm not performing any operation");
+		}
+	}
+	
+	
 
 }
