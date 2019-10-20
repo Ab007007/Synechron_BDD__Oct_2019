@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/features/createCustomer.feature",
+		features = "src/test/java/features/GoogleSearch.feature",
 		glue = {"com/synechron/bdd/actitime/bdd/stepdefinitions"},
 		monochrome = true,
 		dryRun = false,
