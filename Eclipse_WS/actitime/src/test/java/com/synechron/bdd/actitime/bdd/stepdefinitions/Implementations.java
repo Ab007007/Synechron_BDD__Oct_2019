@@ -11,6 +11,12 @@ public class Implementations {
 
 	int a, b, c;
 	double d;
+	Person person ; 
+	
+	public Implementations(Person person) {
+		this.person = person;
+		
+	}
 
 	@Given("^I want to perform addition on two numbers$")
 	public void i_want_to_perform_addition_on_two_numbers() throws Throwable {
@@ -105,5 +111,21 @@ public class Implementations {
 	    // Write code here that turns the phrase above into concrete actions
 	    System.out.println(" Third ");
 	}
+	
+	@Given("^User should be able to access other class members$")
+	public void user_should_be_able_to_access_other_class_members() throws Throwable {
+	    System.out.println("Person object Hash code is : " + person.hashCode());
+	}
+
+	@Then("^Print those$")
+	public void print_those() throws Throwable {
+	   System.out.println("Person default name : "  + person.name);
+	   System.out.println("Person default Address : "  + person.address);
+	   person.setName("ARAVINDA HB");
+	   person.setAddress("USA");
+	   System.out.println("Person New name : "  + person.getName());
+	   System.out.println("Person New Address : "  + person.getAddress());
+	}
+
 
 }

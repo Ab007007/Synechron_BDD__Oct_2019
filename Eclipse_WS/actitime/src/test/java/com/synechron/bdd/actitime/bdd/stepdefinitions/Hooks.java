@@ -1,21 +1,32 @@
 package com.synechron.bdd.actitime.bdd.stepdefinitions;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hooks
 {
 	@Before(order = 0)
-	public void beforeScenario()
+	public void beforeScenario(Scenario scenario)
 	{
+		System.out.println("############################################################################################3");
 		System.out.println("------ This will be executed before the scenario starts its execution--------------");
+		System.out.println("Name of the Scenario - " + scenario.getName());
+		System.out.println("Execution Status " + scenario.getStatus());
+		System.out.println("############################################################################################3");
+		
 	}
 
 	
 	@After(order = 1)
-	public void afterScenario()
+	public void afterScenario(Scenario scenario)
 	{
+		System.out.println("############################################################################################3");
 		System.out.println("------- This will be executed after the scenario is executed ------------");
+		System.out.println("Name of the Scenario - " + scenario.getName());
+		System.out.println("Execution Status " + scenario.getStatus());
+		System.out.println("############################################################################################3");
+		
 	}
 	
 	

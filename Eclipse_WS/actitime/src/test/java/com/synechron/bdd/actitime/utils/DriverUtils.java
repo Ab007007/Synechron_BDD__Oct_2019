@@ -4,7 +4,34 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DriverUtils {
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+public class DriverUtils
+{
+	
+	public WebDriver driver;
+	public ExtentReports extent;
+	public static ExtentTest scenarioDef;
+	public static ExtentTest features;
+	public static String loc = "D:\\Synechron_12_10_2019\\Eclipse_WS\\actitime\\test-output\\";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static WebElement getMyElement(WebDriver driver, String identifier, String identifierValue)  {
 		System.out.println("Finding element using " + identifier + " and " + identifierValue);
 		WebElement ele = null;

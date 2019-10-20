@@ -17,27 +17,33 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Creating Customer for Actitime Application
+Feature: Create Customer And Delete Customer
 
-  Background: User is logged in to Actitime
+ Background: User is logged in to Actitime
     Given User is on Actitime Login Page
     When I enter valid user name and password
     Then I should be able to see home page
-
-  @regression
-  Scenario: Create Customer without Importing
+	
+	@regression
+	Scenario: Create Customer without Importing
     When I click on Task Link and Add New Button
     Then I should be able to see New Customer Button
     And I click on New Customer Button
-    Then I should be able to enter "BDD-Cucumber-Cus111" and "BDD-Cucumber-Cust-Desc10"
+    Then I should be able to enter "BDD-Cucumber-Cus1111" and "BDD-Cucumber-Cust-Desc10"
     And I validate Success Message
     Then I should be able to logout of the application
-
-  @stage
-  Scenario: Create Customer without Importing
-    When I click on Task Link and Add New Button
-    Then I should be able to see New Customer Button
-    And I click on New Customer Button
-    Then I should be able to enter "BDD-Cucumber-Cust9" and "BDD-Cucumber-Cust-Desc7" and unselect All Checkboxes
-    And I validate Success Message
-    Then I should be able to logout of the application
+    
+   	@regression 
+   	Scenario: Delete Customer which is Created 
+   	  When I click on Task Link 
+    	Then I should be able to Search a customer "BDD-Cucumber-Cus1111"
+    	When I click on settings Icon next to Customer name
+    	Then I should see Customer details Section
+    	And I click on actions and delete button
+    	Then I should prompt popup
+    	And I click on delete Permanently button 
+    	And I verify success message
+    	Then Logout of application
+   
+   	
+    
