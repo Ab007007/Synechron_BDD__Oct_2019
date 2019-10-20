@@ -1,4 +1,4 @@
-package com.synechron.bdd.actitime.bdd.stepdefinitions;
+package com.synechron.bdd.actitime.stepdefinitions;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;

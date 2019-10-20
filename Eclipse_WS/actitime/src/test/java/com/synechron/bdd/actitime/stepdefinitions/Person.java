@@ -1,4 +1,4 @@
-package com.synechron.bdd.actitime.bdd.stepdefinitions;
+package com.synechron.bdd.actitime.stepdefinitions;
 
 public class Person {
 

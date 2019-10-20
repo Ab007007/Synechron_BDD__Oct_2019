@@ -1,4 +1,4 @@
-package com.synechron.bdd.actitime.bdd.stepdefinitions;
+package com.synechron.bdd.actitime.stepdefinitions;
 
 import java.sql.DriverManager;
 import java.util.List;

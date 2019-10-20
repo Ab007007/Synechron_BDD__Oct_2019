@@ -1,4 +1,4 @@
-package com.synechron.bdd.actitime.bdd.testrunner;
+package com.synechron.bdd.actitime.testrunner;
 
 import org.junit.runner.RunWith;
 
